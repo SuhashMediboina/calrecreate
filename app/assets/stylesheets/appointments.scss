@@ -9,3 +9,18 @@ body {
     line-height: 1.5;
     padding-bottom: 200px;
 }
+
+.submit-button {
+    background-color: #d91919;
+    border: none;
+    color: white;
+    padding: 16px 70px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.appointment {
+    padding-top: 10 px;
+    border-bottom: solid 1px #ccc;
+}
