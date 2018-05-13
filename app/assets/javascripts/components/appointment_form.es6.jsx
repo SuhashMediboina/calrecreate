@@ -12,7 +12,7 @@ class AppointmentForm extends React.Component {
     }
     
     setAppTime(e) {
-        const name = e.toDate();
+        const name = 'app_time';
         const obj = {};
         if(obj[name] = e.toDate()) {
             this.props.onUserInput(obj);
@@ -25,16 +25,18 @@ class AppointmentForm extends React.Component {
         };
         return (
             <div>
-                <h2>Make an appointment</h2>
-                <form onSubmit={(e) => this.handleSubmit(e)}>
-                    <input name="title" placeholder="Appointment title" 
+                <h2>Make a new appointment</h2>
+                <form onSubmit={(event) => this.handleSubmit(event)}>
+                  <input name='title' placeholder='Appointment Title'
                     value={this.props.input_title}
-                    onChange={(e) => this.handleChange(e)}></input>
-                    <Datetime input={false} open={true} inputProps={inputProps} 
+                    onChange={(event) => this.handleChange(event)} />
+        
+                  <Datetime input={false} open={true} inputProps={inputProps}
                     value={this.props.appt_time}
-                    onChange={(e) => this.setAppTime(e)}/>
-                    <input type="submit" value="Make Appointment" className="submit-button"></input>
-                </form>
+                    onChange={(event) => this.setAppTime(event)} />
+        
+                  <input type='submit' value='Make Appointment' className='submit-button' />
+                </form>        
             </div>
         )
     }
